@@ -18,7 +18,7 @@ letter [_a-zA-Z]
 character [_a-zA-Z0-9]
 ID {letter}{1}{character}{0,31}
 INT ({nz_digit}{digit}{0,31})|[0]
-FLOAT (({nz_digit}{digit}*)|0)\.(({digit}*{nz_digit})|0)
+FLOAT (({nz_digit}{digit}*)|0)\.{digit}+
 SCIENCE_FLOAT (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee][+-]?[0-9]+
 ONE_LINE_COMMENT \/\/[^\n]*
 COMMENT_L \/\* 

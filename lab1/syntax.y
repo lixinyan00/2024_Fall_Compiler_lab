@@ -259,9 +259,6 @@ Stmt : Exp SEMI{
     | Exp error COMMA {
         grammar_error = 1; yyerrok;
     }
-    | Exp error {
-        grammar_error = 1; yyerrok;
-    }
     | RETURN Exp error {
         grammar_error = 1; yyerrok;
     }
@@ -269,6 +266,9 @@ Stmt : Exp SEMI{
         grammar_error = 1; yyerrok;
     }
     | IF LP error RP Stmt ELSE Stmt{
+        grammar_error = 1; yyerrok;
+    }
+    | Exp error{
         grammar_error = 1; yyerrok;
     }
     ;
