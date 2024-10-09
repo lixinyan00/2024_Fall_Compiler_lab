@@ -495,16 +495,16 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  11
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   340
+#define YYLAST   364
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  31
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  22
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  79
+#define YYNRULES  82
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  138
+#define YYNSTATES  144
 
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   285
@@ -558,10 +558,11 @@ static const yytype_int16 yyrline[] =
       93,    97,   104,   108,   113,   121,   127,   130,   135,   140,
      144,   151,   155,   162,   168,   171,   175,   181,   186,   192,
      199,   203,   208,   212,   217,   221,   227,   235,   245,   253,
-     256,   259,   262,   266,   269,   275,   281,   285,   289,   296,
-     300,   307,   313,   319,   325,   331,   337,   343,   349,   355,
-     361,   366,   371,   378,   384,   391,   397,   401,   405,   409,
-     412,   415,   418,   421,   424,   427,   430,   433,   437,   443
+     256,   259,   262,   265,   268,   271,   275,   278,   284,   290,
+     294,   298,   305,   309,   316,   322,   328,   334,   340,   346,
+     352,   358,   364,   370,   375,   380,   387,   393,   400,   406,
+     410,   414,   418,   421,   424,   427,   430,   433,   436,   439,
+     442,   446,   452
 };
 #endif
 
@@ -592,7 +593,7 @@ static const yytype_int16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF (-120)
+#define YYPACT_NINF (-53)
 
 #define yypact_value_is_default(Yyn) \
   ((Yyn) == YYPACT_NINF)
@@ -606,20 +607,21 @@ static const yytype_int16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int16 yypact[] =
 {
-      -6,  -120,   -13,    15,  -120,    -6,    22,  -120,     2,    27,
-    -120,  -120,  -120,    56,  -120,    39,   101,    73,     4,    -6,
-      60,  -120,    -6,  -120,   158,    57,  -120,    86,    17,  -120,
-      25,    96,    -6,  -120,    42,   102,  -120,    86,   108,   117,
-    -120,  -120,  -120,   107,   116,   135,    79,   137,   132,  -120,
-    -120,    43,   160,   160,   160,   160,   126,   128,   134,  -120,
-    -120,  -120,   127,    42,   189,  -120,   146,  -120,    -6,  -120,
-    -120,  -120,   160,  -120,    86,  -120,    97,    41,   261,   203,
-     160,   160,   155,  -120,  -120,  -120,  -120,     5,    71,    95,
-     100,   104,   129,   133,   138,    26,   160,  -120,   289,  -120,
-    -120,  -120,  -120,   275,   217,  -120,   232,   136,  -120,   289,
-    -120,   322,  -120,    97,  -120,    97,  -120,    41,  -120,    41,
-    -120,   315,  -120,   302,  -120,  -120,   246,    66,  -120,    66,
-     160,  -120,  -120,   130,  -120,  -120,    66,  -120
+      -7,   -53,   -17,    16,   -53,    -7,    22,   -53,    -3,     2,
+     -53,   -53,   -53,    56,   -53,    31,   101,    73,     4,    -7,
+      34,   -53,    -7,   -53,   185,    57,   -53,    51,    17,   -53,
+      25,    62,    -7,   -53,    42,    96,   -53,    51,   102,    84,
+     -53,   -53,   -53,    98,   106,   118,    79,   123,   131,   -53,
+     -53,    43,   169,   169,   169,   169,   120,   122,   124,   -53,
+     -53,   -53,   121,    42,   203,   -53,   126,   -53,    -7,   -53,
+     -53,   -53,   169,   -53,    51,   -53,    97,    -4,   275,   217,
+       5,   169,   165,   -53,   -53,   144,   -53,    71,    95,   100,
+     104,   129,   133,   138,   162,    26,   169,   -53,   303,   -53,
+     -53,   -53,   -53,   134,   289,   231,   -53,   246,   136,   -53,
+     -53,   303,   -53,   346,   -53,    97,   -53,    97,   -53,    -4,
+     -53,    -4,   -53,   329,   -53,   316,   -53,   -53,   260,    66,
+      66,   -53,    66,   169,   -53,   -53,   125,   130,   -53,   -53,
+      66,    66,   -53,   -53
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -628,27 +630,28 @@ static const yytype_int16 yypact[] =
 static const yytype_int8 yydefact[] =
 {
        3,    12,    16,     0,     2,     3,     0,    13,    18,     0,
-      15,     1,     4,     0,     6,    19,     0,    10,     0,    43,
-       0,    24,    43,     9,     0,     0,     5,     0,     0,     7,
-       0,     0,    43,    30,     0,     0,    23,     0,     0,    27,
-       8,    19,    11,     0,     0,     0,    49,     0,    47,    14,
-      44,     0,     0,     0,     0,     0,     0,     0,    66,    67,
-      68,    34,     0,     0,     0,    25,    28,    22,     0,    21,
-      20,    46,     0,    45,     0,    39,    60,    61,     0,     0,
-       0,     0,     0,    29,    31,    41,    33,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,    26,    50,    48,
-      59,    42,    35,     0,     0,    63,    79,     0,    70,    51,
-      69,    54,    73,    55,    74,    56,    75,    57,    76,    58,
-      71,    52,    72,    53,    77,    65,     0,     0,    40,     0,
-       0,    62,    64,    36,    38,    78,     0,    37
+      15,     1,     4,     0,     6,    19,     0,    10,     0,    46,
+       0,    24,    46,     9,     0,     0,     5,     0,     0,     7,
+       0,     0,    46,    30,     0,     0,    23,     0,     0,    27,
+       8,    19,    11,     0,     0,     0,    52,     0,    50,    14,
+      47,     0,     0,     0,     0,     0,     0,     0,    69,    70,
+      71,    34,     0,     0,     0,    25,    28,    22,     0,    21,
+      20,    49,     0,    48,     0,    39,    63,    64,     0,     0,
+       0,     0,     0,    29,    31,    42,    33,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,    26,    53,    51,
+      62,    43,    35,     0,     0,     0,    66,    82,     0,    41,
+      73,    54,    72,    57,    76,    58,    77,    59,    78,    60,
+      79,    61,    74,    55,    75,    56,    80,    68,     0,     0,
+       0,    40,     0,     0,    65,    67,    44,    36,    38,    81,
+       0,     0,    45,    37
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int16 yypgoto[] =
 {
-    -120,  -120,   165,  -120,   124,     7,  -120,  -120,  -120,   -26,
-    -120,   109,  -120,    70,   115,  -119,    29,  -120,   105,  -120,
-     -52,    51
+     -53,   -53,   154,   -53,   137,     7,   -53,   -53,   -53,   -26,
+     -53,   103,   -53,    41,   105,   211,    29,   -53,   110,   -53,
+     -52,    36
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
@@ -656,7 +659,7 @@ static const yytype_int8 yydefgoto[] =
 {
       -1,     3,     4,     5,    16,    30,     7,     9,    10,    17,
       18,    38,    39,    61,    62,    63,    31,    32,    47,    48,
-      64,   107
+      64,   108
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -664,80 +667,84 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_int16 yytable[] =
 {
-      76,    77,    78,    79,    46,    20,   108,     6,   133,     1,
-     134,    66,     6,    52,     8,    11,     2,   137,    43,    53,
-      98,    54,   -17,    13,    22,    14,    45,   124,   103,   104,
-     106,    37,    58,    59,    60,   109,   111,   113,   115,   117,
-     119,   121,   123,    51,   126,    44,    75,    19,    46,    15,
-      52,    34,    41,   125,    95,    24,    53,    20,    54,    96,
+      76,    77,    78,    79,    46,    20,   103,     6,     1,    95,
+       8,    66,     6,    52,    96,     2,    11,   -17,    43,    53,
+      98,    54,    19,    13,    22,    14,    45,   126,   104,   105,
+     107,    37,    58,    59,    60,   111,   113,   115,   117,   119,
+     121,   123,   125,    51,   128,    44,    75,    24,    46,    15,
+      52,    34,    41,   127,    23,    33,    53,    20,    54,    29,
       40,    50,    22,   -32,    33,    55,    56,    51,    57,    58,
-      59,    60,   110,    21,    52,    37,    22,    27,   106,    52,
-      53,    33,    54,    23,    72,    53,    22,    54,    29,    55,
+      59,    60,   110,    21,    52,    37,    22,    27,    41,    52,
+      53,   107,    54,    49,    72,    53,    22,    54,    68,    55,
       56,    28,    57,    58,    59,    60,   112,    28,    58,    59,
       60,   114,    25,    52,    26,   116,    91,    92,    52,    53,
-      95,    54,    52,    41,    53,    96,    54,    49,    53,    65,
-      54,    68,    58,    59,    60,    67,    69,    58,    59,    60,
-     118,    58,    59,    60,   120,    70,    74,    52,    71,   122,
-      73,    52,    80,    53,    81,    54,    52,    53,    83,    54,
-      82,    42,    53,   131,    54,   136,    58,    59,    60,    35,
-      58,    59,    60,    52,    28,    58,    59,    60,    52,    53,
-      12,    54,   105,     1,    53,    36,    54,    97,    84,    99,
-       2,   135,    58,    59,    60,     0,     0,    58,    59,    60,
-      85,     0,    86,     0,    87,    88,    89,    90,    91,    92,
-      93,    94,    95,     0,   101,     0,   102,    96,    87,    88,
-      89,    90,    91,    92,    93,    94,    95,     0,   128,     0,
-       0,    96,    87,    88,    89,    90,    91,    92,    93,    94,
-      95,     0,     0,     0,   129,    96,   130,    87,    88,    89,
-      90,    91,    92,    93,    94,    95,     0,     0,     0,     0,
-      96,    87,    88,    89,    90,    91,    92,    93,    94,    95,
-       0,     0,     0,     0,    96,   132,    87,    88,    89,    90,
-      91,    92,    93,    94,    95,     0,     0,     0,   100,    96,
+      95,    54,    52,    65,    53,    96,    54,    69,    53,    67,
+      54,    71,    58,    59,    60,    70,    73,    58,    59,    60,
+     118,    58,    59,    60,   120,    74,    80,    52,    81,   122,
+      82,    52,    83,    53,    28,    54,    52,    53,   109,    54,
+     140,   129,    53,   134,    54,   141,    58,    59,    60,    12,
+      58,    59,    60,   124,    42,    58,    59,    60,    84,   139,
+      52,    97,     0,    52,     0,     0,    53,    52,    54,    53,
+       0,    54,   106,    53,    99,    54,    35,     0,     0,    58,
+      59,    60,    58,    59,    60,     0,    58,    59,    60,     0,
+       1,     0,    36,     0,    85,     0,    86,     2,    87,    88,
+      89,    90,    91,    92,    93,    94,    95,     0,   101,     0,
+     102,    96,    87,    88,    89,    90,    91,    92,    93,    94,
+      95,     0,   131,     0,     0,    96,    87,    88,    89,    90,
+      91,    92,    93,    94,    95,     0,     0,     0,   132,    96,
+     133,    87,    88,    89,    90,    91,    92,    93,    94,    95,
+       0,     0,     0,     0,    96,    87,    88,    89,    90,    91,
+      92,    93,    94,    95,     0,     0,     0,     0,    96,   135,
       87,    88,    89,    90,    91,    92,    93,    94,    95,     0,
-       0,     0,   127,    96,    87,    88,    89,    90,    91,    92,
-      93,    94,    95,     0,     0,     0,     0,    96,    88,    89,
-      90,    91,    92,    93,     0,    95,     0,     0,     0,     0,
-      96,    88,    89,    90,    91,    92,     0,     0,    95,    89,
-      90,    91,    92,    96,     0,    95,     0,     0,     0,     0,
-      96
+       0,     0,   100,    96,    87,    88,    89,    90,    91,    92,
+      93,    94,    95,     0,     0,     0,   130,    96,    87,    88,
+      89,    90,    91,    92,    93,    94,    95,     0,     0,     0,
+       0,    96,    88,    89,    90,    91,    92,    93,     0,    95,
+       0,     0,     0,     0,    96,    88,    89,    90,    91,    92,
+     136,   137,    95,   138,     0,     0,     0,    96,     0,     0,
+       0,   142,   143,    89,    90,    91,    92,     0,     0,    95,
+       0,     0,     0,     0,    96
 };
 
 static const yytype_int16 yycheck[] =
 {
-      52,    53,    54,    55,    30,     1,     1,     0,   127,    15,
-     129,    37,     5,     8,    27,     0,    22,   136,     1,    14,
+      52,    53,    54,    55,    30,     1,     1,     0,    15,    13,
+      27,    37,     5,     8,    18,    22,     0,    20,     1,    14,
       72,    16,    20,     1,    20,     3,     1,     1,    80,    81,
       82,    24,    27,    28,    29,    87,    88,    89,    90,    91,
-      92,    93,    94,     1,    96,    28,     3,    20,    74,    27,
-       8,    22,    27,    27,    13,    16,    14,     1,    16,    18,
+      92,    93,    94,     1,    96,    28,     3,    16,    74,    27,
+       8,    22,    27,    27,    13,    21,    14,     1,    16,    18,
        3,    32,    20,    21,    21,    23,    24,     1,    26,    27,
-      28,    29,     1,    17,     8,    68,    20,     4,   130,     8,
-      14,    21,    16,    13,     5,    14,    20,    16,    18,    23,
+      28,    29,     1,    17,     8,    68,    20,     4,    27,     8,
+      14,   133,    16,    21,     5,    14,    20,    16,     4,    23,
       24,    18,    26,    27,    28,    29,     1,    18,    27,    28,
       29,     1,     1,     8,     3,     1,     9,    10,     8,    14,
-      13,    16,     8,    27,    14,    18,    16,    21,    14,    17,
-      16,     4,    27,    28,    29,    17,    19,    27,    28,    29,
-       1,    27,    28,    29,     1,    19,     4,     8,     3,     1,
-       3,     8,    16,    14,    16,    16,     8,    14,    21,    16,
-      16,    27,    14,    17,    16,    25,    27,    28,    29,     1,
-      27,    28,    29,     8,    18,    27,    28,    29,     8,    14,
-       5,    16,    17,    15,    14,    17,    16,    68,    63,    74,
-      22,   130,    27,    28,    29,    -1,    -1,    27,    28,    29,
-       1,    -1,     3,    -1,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    -1,     1,    -1,     3,    18,     5,     6,
+      13,    16,     8,    17,    14,    18,    16,    19,    14,    17,
+      16,     3,    27,    28,    29,    19,     3,    27,    28,    29,
+       1,    27,    28,    29,     1,     4,    16,     8,    16,     1,
+      16,     8,    21,    14,    18,    16,     8,    14,     4,    16,
+      25,    17,    14,    17,    16,    25,    27,    28,    29,     5,
+      27,    28,    29,     1,    27,    27,    28,    29,    63,   133,
+       8,    68,    -1,     8,    -1,    -1,    14,     8,    16,    14,
+      -1,    16,    17,    14,    74,    16,     1,    -1,    -1,    27,
+      28,    29,    27,    28,    29,    -1,    27,    28,    29,    -1,
+      15,    -1,    17,    -1,     1,    -1,     3,    22,     5,     6,
        7,     8,     9,    10,    11,    12,    13,    -1,     1,    -1,
-      -1,    18,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    -1,    -1,    -1,    17,    18,     4,     5,     6,     7,
-       8,     9,    10,    11,    12,    13,    -1,    -1,    -1,    -1,
-      18,     5,     6,     7,     8,     9,    10,    11,    12,    13,
-      -1,    -1,    -1,    -1,    18,    19,     5,     6,     7,     8,
+       3,    18,     5,     6,     7,     8,     9,    10,    11,    12,
+      13,    -1,     1,    -1,    -1,    18,     5,     6,     7,     8,
        9,    10,    11,    12,    13,    -1,    -1,    -1,    17,    18,
+       4,     5,     6,     7,     8,     9,    10,    11,    12,    13,
+      -1,    -1,    -1,    -1,    18,     5,     6,     7,     8,     9,
+      10,    11,    12,    13,    -1,    -1,    -1,    -1,    18,    19,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    -1,
       -1,    -1,    17,    18,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    -1,    -1,    -1,    -1,    18,     6,     7,
-       8,     9,    10,    11,    -1,    13,    -1,    -1,    -1,    -1,
-      18,     6,     7,     8,     9,    10,    -1,    -1,    13,     7,
-       8,     9,    10,    18,    -1,    13,    -1,    -1,    -1,    -1,
-      18
+      11,    12,    13,    -1,    -1,    -1,    17,    18,     5,     6,
+       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    -1,
+      -1,    18,     6,     7,     8,     9,    10,    11,    -1,    13,
+      -1,    -1,    -1,    -1,    18,     6,     7,     8,     9,    10,
+     129,   130,    13,   132,    -1,    -1,    -1,    18,    -1,    -1,
+      -1,   140,   141,     7,     8,     9,    10,    -1,    -1,    13,
+      -1,    -1,    -1,    -1,    18
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -754,10 +761,11 @@ static const yytype_int8 yystos[] =
       19,     3,     5,     3,     4,     3,    51,    51,    51,    51,
       16,    16,    16,    21,    45,     1,     3,     5,     6,     7,
        8,     9,    10,    11,    12,    13,    18,    42,    51,    49,
-      17,     1,     3,    51,    51,    17,    51,    52,     1,    51,
+      17,     1,     3,     1,    51,    51,    17,    51,    52,     4,
        1,    51,     1,    51,     1,    51,     1,    51,     1,    51,
-       1,    51,     1,    51,     1,    27,    51,    17,     1,    17,
-       4,    17,    19,    46,    46,    52,    25,    46
+       1,    51,     1,    51,     1,    51,     1,    27,    51,    17,
+      17,     1,    17,     4,    17,    19,    46,    46,    46,    52,
+      25,    25,    46,    46
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
@@ -767,10 +775,11 @@ static const yytype_int8 yyr1[] =
       35,    35,    36,    36,    37,    37,    38,    38,    39,    40,
       40,    40,    41,    41,    41,    41,    42,    42,    43,    44,
       44,    45,    45,    46,    46,    46,    46,    46,    46,    46,
-      46,    46,    46,    47,    47,    48,    48,    49,    49,    50,
-      50,    51,    51,    51,    51,    51,    51,    51,    51,    51,
+      46,    46,    46,    46,    46,    46,    47,    47,    48,    48,
+      49,    49,    50,    50,    51,    51,    51,    51,    51,    51,
       51,    51,    51,    51,    51,    51,    51,    51,    51,    51,
-      51,    51,    51,    51,    51,    51,    51,    51,    52,    52
+      51,    51,    51,    51,    51,    51,    51,    51,    51,    51,
+      51,    52,    52
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
@@ -780,10 +789,11 @@ static const yytype_int8 yyr2[] =
        1,     3,     1,     1,     5,     2,     0,     1,     1,     1,
        4,     4,     4,     3,     2,     4,     3,     1,     2,     4,
        2,     2,     0,     2,     1,     3,     5,     7,     5,     2,
-       4,     2,     3,     0,     2,     3,     3,     1,     3,     1,
-       3,     3,     3,     3,     3,     3,     3,     3,     3,     3,
-       2,     2,     4,     3,     4,     3,     1,     1,     1,     3,
-       3,     3,     3,     3,     3,     3,     3,     3,     3,     1
+       4,     3,     2,     3,     5,     7,     0,     2,     3,     3,
+       1,     3,     1,     3,     3,     3,     3,     3,     3,     3,
+       3,     3,     3,     2,     2,     4,     3,     4,     3,     1,
+       1,     1,     3,     3,     3,     3,     3,     3,     3,     3,
+       3,     3,     1
 };
 
 
@@ -1580,7 +1590,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[0].type_node));
         root = (yyval.type_node);
     }
-#line 1584 "syntax.tab.c"
+#line 1594 "syntax.tab.c"
     break;
 
   case 3:
@@ -1588,7 +1598,7 @@ yyreduce:
              {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "ExtDefList", "ExtDefList", EMPTY);
     }
-#line 1592 "syntax.tab.c"
+#line 1602 "syntax.tab.c"
     break;
 
   case 4:
@@ -1598,7 +1608,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1602 "syntax.tab.c"
+#line 1612 "syntax.tab.c"
     break;
 
   case 5:
@@ -1609,7 +1619,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1613 "syntax.tab.c"
+#line 1623 "syntax.tab.c"
     break;
 
   case 6:
@@ -1619,7 +1629,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1623 "syntax.tab.c"
+#line 1633 "syntax.tab.c"
     break;
 
   case 7:
@@ -1630,7 +1640,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1634 "syntax.tab.c"
+#line 1644 "syntax.tab.c"
     break;
 
   case 8:
@@ -1638,7 +1648,7 @@ yyreduce:
                                      {
         grammar_error = 1; yyerrok;
     }
-#line 1642 "syntax.tab.c"
+#line 1652 "syntax.tab.c"
     break;
 
   case 9:
@@ -1646,7 +1656,7 @@ yyreduce:
                             {
         grammar_error = 1; yyerrok;
     }
-#line 1650 "syntax.tab.c"
+#line 1660 "syntax.tab.c"
     break;
 
   case 10:
@@ -1655,7 +1665,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "ExtDecList", "ExtDecList", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1659 "syntax.tab.c"
+#line 1669 "syntax.tab.c"
     break;
 
   case 11:
@@ -1666,7 +1676,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1670 "syntax.tab.c"
+#line 1680 "syntax.tab.c"
     break;
 
   case 12:
@@ -1675,7 +1685,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Specifier", "Specifier", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1679 "syntax.tab.c"
+#line 1689 "syntax.tab.c"
     break;
 
   case 13:
@@ -1684,7 +1694,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Specifier", "Specifier", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1688 "syntax.tab.c"
+#line 1698 "syntax.tab.c"
     break;
 
   case 14:
@@ -1697,7 +1707,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1701 "syntax.tab.c"
+#line 1711 "syntax.tab.c"
     break;
 
   case 15:
@@ -1707,7 +1717,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1711 "syntax.tab.c"
+#line 1721 "syntax.tab.c"
     break;
 
   case 16:
@@ -1715,7 +1725,7 @@ yyreduce:
          {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "OptTag", "OptTag", EMPTY);
     }
-#line 1719 "syntax.tab.c"
+#line 1729 "syntax.tab.c"
     break;
 
   case 17:
@@ -1724,7 +1734,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "OptTag", "OptTag", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1728 "syntax.tab.c"
+#line 1738 "syntax.tab.c"
     break;
 
   case 18:
@@ -1733,7 +1743,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Tag", "Tag", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1737 "syntax.tab.c"
+#line 1747 "syntax.tab.c"
     break;
 
   case 19:
@@ -1742,7 +1752,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "VarDec", "VarDec", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1746 "syntax.tab.c"
+#line 1756 "syntax.tab.c"
     break;
 
   case 20:
@@ -1754,7 +1764,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1758 "syntax.tab.c"
+#line 1768 "syntax.tab.c"
     break;
 
   case 21:
@@ -1762,7 +1772,7 @@ yyreduce:
                          {
         grammar_error = 1;  yyerrok;
     }
-#line 1766 "syntax.tab.c"
+#line 1776 "syntax.tab.c"
     break;
 
   case 22:
@@ -1774,7 +1784,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1778 "syntax.tab.c"
+#line 1788 "syntax.tab.c"
     break;
 
   case 23:
@@ -1785,7 +1795,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1789 "syntax.tab.c"
+#line 1799 "syntax.tab.c"
     break;
 
   case 24:
@@ -1793,7 +1803,7 @@ yyreduce:
               {
         grammar_error = 1; yyerrok;
     }
-#line 1797 "syntax.tab.c"
+#line 1807 "syntax.tab.c"
     break;
 
   case 25:
@@ -1801,7 +1811,7 @@ yyreduce:
                     {
         grammar_error = 1; yyerrok;
     }
-#line 1805 "syntax.tab.c"
+#line 1815 "syntax.tab.c"
     break;
 
   case 26:
@@ -1812,7 +1822,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1816 "syntax.tab.c"
+#line 1826 "syntax.tab.c"
     break;
 
   case 27:
@@ -1821,7 +1831,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "VarList", "VarList", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1825 "syntax.tab.c"
+#line 1835 "syntax.tab.c"
     break;
 
   case 28:
@@ -1831,7 +1841,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1835 "syntax.tab.c"
+#line 1845 "syntax.tab.c"
     break;
 
   case 29:
@@ -1843,7 +1853,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1847 "syntax.tab.c"
+#line 1857 "syntax.tab.c"
     break;
 
   case 30:
@@ -1851,7 +1861,7 @@ yyreduce:
               {
         grammar_error = 1; yyerrok;
     }
-#line 1855 "syntax.tab.c"
+#line 1865 "syntax.tab.c"
     break;
 
   case 31:
@@ -1861,7 +1871,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1865 "syntax.tab.c"
+#line 1875 "syntax.tab.c"
     break;
 
   case 32:
@@ -1869,7 +1879,7 @@ yyreduce:
      {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "StmtList", "StmtList", EMPTY);
     }
-#line 1873 "syntax.tab.c"
+#line 1883 "syntax.tab.c"
     break;
 
   case 33:
@@ -1879,7 +1889,7 @@ yyreduce:
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1883 "syntax.tab.c"
+#line 1893 "syntax.tab.c"
     break;
 
   case 34:
@@ -1888,7 +1898,7 @@ yyreduce:
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Stmt", "Stmt", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 1892 "syntax.tab.c"
+#line 1902 "syntax.tab.c"
     break;
 
   case 35:
@@ -1899,7 +1909,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1903 "syntax.tab.c"
+#line 1913 "syntax.tab.c"
     break;
 
   case 36:
@@ -1912,7 +1922,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1916 "syntax.tab.c"
+#line 1926 "syntax.tab.c"
     break;
 
   case 37:
@@ -1927,7 +1937,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1931 "syntax.tab.c"
+#line 1941 "syntax.tab.c"
     break;
 
   case 38:
@@ -1940,7 +1950,7 @@ yyreduce:
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1944 "syntax.tab.c"
+#line 1954 "syntax.tab.c"
     break;
 
   case 39:
@@ -1948,7 +1958,7 @@ yyreduce:
                 {
         grammar_error = 1; yyerrok;
     }
-#line 1952 "syntax.tab.c"
+#line 1962 "syntax.tab.c"
     break;
 
   case 40:
@@ -1956,261 +1966,251 @@ yyreduce:
                          {
         grammar_error = 1; yyerrok;
     }
-#line 1960 "syntax.tab.c"
+#line 1970 "syntax.tab.c"
     break;
 
   case 41:
 #line 259 "syntax.y"
-                {
+                      {
         grammar_error = 1; yyerrok;
     }
-#line 1968 "syntax.tab.c"
+#line 1978 "syntax.tab.c"
     break;
 
   case 42:
 #line 262 "syntax.y"
-                       {
+                {
         grammar_error = 1; yyerrok;
     }
-#line 1976 "syntax.tab.c"
+#line 1986 "syntax.tab.c"
     break;
 
   case 43:
-#line 266 "syntax.y"
-          {
-    (yyval.type_node) = NewLexNode((yyloc).first_line, "DefList", "DefList", EMPTY);
+#line 265 "syntax.y"
+                       {
+        grammar_error = 1; yyerrok;
     }
-#line 1984 "syntax.tab.c"
+#line 1994 "syntax.tab.c"
     break;
 
   case 44:
-#line 269 "syntax.y"
+#line 268 "syntax.y"
+                                               {
+        grammar_error = 1; yyerrok;
+    }
+#line 2002 "syntax.tab.c"
+    break;
+
+  case 45:
+#line 271 "syntax.y"
+                                   {
+        grammar_error = 1; yyerrok;
+    }
+#line 2010 "syntax.tab.c"
+    break;
+
+  case 46:
+#line 275 "syntax.y"
+          {
+    (yyval.type_node) = NewLexNode((yyloc).first_line, "DefList", "DefList", EMPTY);
+    }
+#line 2018 "syntax.tab.c"
+    break;
+
+  case 47:
+#line 278 "syntax.y"
                  {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "DefList", "DefList", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 1994 "syntax.tab.c"
+#line 2028 "syntax.tab.c"
     break;
 
-  case 45:
-#line 275 "syntax.y"
+  case 48:
+#line 284 "syntax.y"
                             {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Def", "Def", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2005 "syntax.tab.c"
+#line 2039 "syntax.tab.c"
     break;
 
-  case 46:
-#line 281 "syntax.y"
+  case 49:
+#line 290 "syntax.y"
                           {
         grammar_error = 1; yyerrok;
     }
-#line 2013 "syntax.tab.c"
+#line 2047 "syntax.tab.c"
     break;
 
-  case 47:
-#line 285 "syntax.y"
+  case 50:
+#line 294 "syntax.y"
              {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "DecList", "DecList", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2022 "syntax.tab.c"
+#line 2056 "syntax.tab.c"
     break;
 
-  case 48:
-#line 289 "syntax.y"
+  case 51:
+#line 298 "syntax.y"
                        {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "DecList", "DecList", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2033 "syntax.tab.c"
+#line 2067 "syntax.tab.c"
     break;
 
-  case 49:
-#line 296 "syntax.y"
+  case 52:
+#line 305 "syntax.y"
             {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Dec", "Dec", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2042 "syntax.tab.c"
+#line 2076 "syntax.tab.c"
     break;
 
-  case 50:
-#line 300 "syntax.y"
+  case 53:
+#line 309 "syntax.y"
                          {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Dec", "Dec", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2053 "syntax.tab.c"
+#line 2087 "syntax.tab.c"
     break;
 
-  case 51:
-#line 307 "syntax.y"
+  case 54:
+#line 316 "syntax.y"
                       {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2064 "syntax.tab.c"
+#line 2098 "syntax.tab.c"
     break;
 
-  case 52:
-#line 313 "syntax.y"
+  case 55:
+#line 322 "syntax.y"
                  {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2075 "syntax.tab.c"
+#line 2109 "syntax.tab.c"
     break;
 
-  case 53:
-#line 319 "syntax.y"
+  case 56:
+#line 328 "syntax.y"
                 {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2086 "syntax.tab.c"
-    break;
-
-  case 54:
-#line 325 "syntax.y"
-                   {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2097 "syntax.tab.c"
-    break;
-
-  case 55:
-#line 331 "syntax.y"
-                  {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2108 "syntax.tab.c"
-    break;
-
-  case 56:
-#line 337 "syntax.y"
-                   {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2119 "syntax.tab.c"
+#line 2120 "syntax.tab.c"
     break;
 
   case 57:
-#line 343 "syntax.y"
+#line 334 "syntax.y"
+                   {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2131 "syntax.tab.c"
+    break;
+
+  case 58:
+#line 340 "syntax.y"
                   {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2130 "syntax.tab.c"
+#line 2142 "syntax.tab.c"
     break;
 
-  case 58:
-#line 349 "syntax.y"
+  case 59:
+#line 346 "syntax.y"
+                   {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2153 "syntax.tab.c"
+    break;
+
+  case 60:
+#line 352 "syntax.y"
+                  {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2164 "syntax.tab.c"
+    break;
+
+  case 61:
+#line 358 "syntax.y"
                  {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2141 "syntax.tab.c"
+#line 2175 "syntax.tab.c"
     break;
 
-  case 59:
-#line 355 "syntax.y"
+  case 62:
+#line 364 "syntax.y"
                {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2152 "syntax.tab.c"
+#line 2186 "syntax.tab.c"
     break;
 
-  case 60:
-#line 361 "syntax.y"
+  case 63:
+#line 370 "syntax.y"
                {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2162 "syntax.tab.c"
+#line 2196 "syntax.tab.c"
     break;
 
-  case 61:
-#line 366 "syntax.y"
+  case 64:
+#line 375 "syntax.y"
              {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2172 "syntax.tab.c"
-    break;
-
-  case 62:
-#line 371 "syntax.y"
-                   {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-3].type_node));
-        AddSiblings((yyvsp[-3].type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2184 "syntax.tab.c"
-    break;
-
-  case 63:
-#line 378 "syntax.y"
-              {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2195 "syntax.tab.c"
-    break;
-
-  case 64:
-#line 384 "syntax.y"
-                   {
-        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-3].type_node));
-        AddSiblings((yyvsp[-3].type_node), (yyvsp[-2].type_node));
-        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
-        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
-    }
-#line 2207 "syntax.tab.c"
+#line 2206 "syntax.tab.c"
     break;
 
   case 65:
-#line 391 "syntax.y"
-                {
+#line 380 "syntax.y"
+                   {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
-        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddChild((yyval.type_node), (yyvsp[-3].type_node));
+        AddSiblings((yyvsp[-3].type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
@@ -2218,126 +2218,160 @@ yyreduce:
     break;
 
   case 66:
-#line 397 "syntax.y"
+#line 387 "syntax.y"
+              {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2229 "syntax.tab.c"
+    break;
+
+  case 67:
+#line 393 "syntax.y"
+                   {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-3].type_node));
+        AddSiblings((yyvsp[-3].type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2241 "syntax.tab.c"
+    break;
+
+  case 68:
+#line 400 "syntax.y"
+                {
+        (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
+        AddChild((yyval.type_node), (yyvsp[-2].type_node));
+        AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
+        AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
+    }
+#line 2252 "syntax.tab.c"
+    break;
+
+  case 69:
+#line 406 "syntax.y"
         {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2227 "syntax.tab.c"
+#line 2261 "syntax.tab.c"
     break;
 
-  case 67:
-#line 401 "syntax.y"
+  case 70:
+#line 410 "syntax.y"
          {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2236 "syntax.tab.c"
+#line 2270 "syntax.tab.c"
     break;
 
-  case 68:
-#line 405 "syntax.y"
+  case 71:
+#line 414 "syntax.y"
            {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Exp", "Exp", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2245 "syntax.tab.c"
-    break;
-
-  case 69:
-#line 409 "syntax.y"
-                     {
-        grammar_error = 1; yyerrok;
-    }
-#line 2253 "syntax.tab.c"
-    break;
-
-  case 70:
-#line 412 "syntax.y"
-                        {
-        grammar_error = 1; yyerrok;
-    }
-#line 2261 "syntax.tab.c"
-    break;
-
-  case 71:
-#line 415 "syntax.y"
-                   {
-        grammar_error = 1; yyerrok;
-    }
-#line 2269 "syntax.tab.c"
+#line 2279 "syntax.tab.c"
     break;
 
   case 72:
 #line 418 "syntax.y"
-                  {
+                     {
         grammar_error = 1; yyerrok;
     }
-#line 2277 "syntax.tab.c"
+#line 2287 "syntax.tab.c"
     break;
 
   case 73:
 #line 421 "syntax.y"
-                    {
+                        {
         grammar_error = 1; yyerrok;
     }
-#line 2285 "syntax.tab.c"
+#line 2295 "syntax.tab.c"
     break;
 
   case 74:
 #line 424 "syntax.y"
-                     {
+                   {
         grammar_error = 1; yyerrok;
     }
-#line 2293 "syntax.tab.c"
+#line 2303 "syntax.tab.c"
     break;
 
   case 75:
 #line 427 "syntax.y"
-                    {
+                  {
         grammar_error = 1; yyerrok;
     }
-#line 2301 "syntax.tab.c"
+#line 2311 "syntax.tab.c"
     break;
 
   case 76:
 #line 430 "syntax.y"
-                   {
+                    {
         grammar_error = 1; yyerrok;
     }
-#line 2309 "syntax.tab.c"
+#line 2319 "syntax.tab.c"
     break;
 
   case 77:
 #line 433 "syntax.y"
-                   {
+                     {
         grammar_error = 1; yyerrok;
     }
-#line 2317 "syntax.tab.c"
+#line 2327 "syntax.tab.c"
     break;
 
   case 78:
-#line 437 "syntax.y"
+#line 436 "syntax.y"
+                    {
+        grammar_error = 1; yyerrok;
+    }
+#line 2335 "syntax.tab.c"
+    break;
+
+  case 79:
+#line 439 "syntax.y"
+                   {
+        grammar_error = 1; yyerrok;
+    }
+#line 2343 "syntax.tab.c"
+    break;
+
+  case 80:
+#line 442 "syntax.y"
+                   {
+        grammar_error = 1; yyerrok;
+    }
+#line 2351 "syntax.tab.c"
+    break;
+
+  case 81:
+#line 446 "syntax.y"
                      {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Args", "Args", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[-2].type_node));
         AddSiblings((yyvsp[-2].type_node), (yyvsp[-1].type_node));
         AddSiblings((yyvsp[-1].type_node), (yyvsp[0].type_node));
     }
-#line 2328 "syntax.tab.c"
+#line 2362 "syntax.tab.c"
     break;
 
-  case 79:
-#line 443 "syntax.y"
+  case 82:
+#line 452 "syntax.y"
          {
         (yyval.type_node) = NewLexNode((yyloc).first_line, "Args", "Args", GRAM_UNIT);
         AddChild((yyval.type_node), (yyvsp[0].type_node));
     }
-#line 2337 "syntax.tab.c"
+#line 2371 "syntax.tab.c"
     break;
 
 
-#line 2341 "syntax.tab.c"
+#line 2375 "syntax.tab.c"
 
       default: break;
     }
@@ -2575,7 +2609,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 448 "syntax.y"
+#line 457 "syntax.y"
 
 yyerror(char *msg) {
     grammar_error = 1;

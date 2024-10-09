@@ -256,10 +256,19 @@ Stmt : Exp SEMI{
     | WHILE LP Exp error {
         grammar_error = 1; yyerrok;
     }
+    | Exp error COMMA {
+        grammar_error = 1; yyerrok;
+    }
     | Exp error {
         grammar_error = 1; yyerrok;
     }
     | RETURN Exp error {
+        grammar_error = 1; yyerrok;
+    }
+    | IF LP error RP Stmt %prec LOWER_THAN_ELSE{
+        grammar_error = 1; yyerrok;
+    }
+    | IF LP error RP Stmt ELSE Stmt{
         grammar_error = 1; yyerrok;
     }
     ;
