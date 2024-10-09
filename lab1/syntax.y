@@ -83,6 +83,9 @@ ExtDef : Specifier ExtDecList SEMI{
         AddSiblings($1, $2);
         AddSiblings($2, $3);
     }
+    | Specifier ExtDecList error SEMI{
+        grammar_error = 1; yyerrok;
+    }
     | Specifier error CompSt{
         grammar_error = 1; yyerrok;
     }
@@ -138,12 +141,15 @@ VarDec : ID{
         $$ = NewLexNode(@$.first_line, "VarDec", "VarDec", GRAM_UNIT);
         AddChild($$, $1);
     }
-    | VarDec LB INT RB{
+    | VarDec LB INT RB {
         $$ = NewLexNode(@$.first_line, "VarDec", "VarDec", GRAM_UNIT);
         AddChild($$, $1);
         AddSiblings($1, $2);
         AddSiblings($2, $3);
         AddSiblings($3, $4);
+    }
+    | VarDec LB error RB {
+        grammar_error = 1;  yyerrok;
     }
     ;
 FunDec : ID LP VarList RP{
@@ -160,6 +166,9 @@ FunDec : ID LP VarList RP{
         AddSiblings($2, $3);
     }
     | error RP{
+        grammar_error = 1; yyerrok;
+    }
+    | ID LP error RP{
         grammar_error = 1; yyerrok;
     }
     ;
@@ -248,6 +257,9 @@ Stmt : Exp SEMI{
         grammar_error = 1; yyerrok;
     }
     | Exp error {
+        grammar_error = 1; yyerrok;
+    }
+    | RETURN Exp error {
         grammar_error = 1; yyerrok;
     }
     ;
@@ -436,7 +448,9 @@ Args : Exp COMMA Args{
 %%
 yyerror(char *msg) {
     grammar_error = 1;
-  printf("Error type B at line %d: %s, near \'%s\'\n", yylineno, msg, yytext);
+    if(lexical_error != yylineno) {
+        printf("Error type B at line %d: %s, near \'%s\'\n", yylineno, msg, yytext);
+    }
 }
 struct TreeNode* GetRoot()
 {

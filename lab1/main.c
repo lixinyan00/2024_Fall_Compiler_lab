@@ -20,6 +20,5 @@ int main(int argc, char **argv) {
   if (lexical_error == 0 && grammar_error == 0) {
     Print(GetRoot(), 0);
   }
-
   return 0;
 }

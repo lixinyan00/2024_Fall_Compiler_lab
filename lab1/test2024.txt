@@ -1,0 +1,76 @@
+./Tests_2024/inputs/A-10.cmm
+Error type B at line 1: syntax error, near ';'
+./Tests_2024/inputs/A-1.cmm
+Error type B at line 2: syntax error, near ']'
+./Tests_2024/inputs/A-2.cmm
+Error type A at line 3: invalid ID: '2sum'
+./Tests_2024/inputs/A-3.cmm
+Error type B at line 5: syntax error, near '='
+./Tests_2024/inputs/A-4.cmm
+Error type B at line 7: syntax error, near 'student'
+./Tests_2024/inputs/A-5.cmm
+Error type B at line 2: syntax error, near ';'
+./Tests_2024/inputs/A-6.cmm
+Error type B at line 1: syntax error, near '='
+./Tests_2024/inputs/A-7.cmm
+Error type A at line 4: Mysterious characters: '~'
+./Tests_2024/inputs/A-8.cmm
+Error type B at line 4: syntax error, near ';'
+./Tests_2024/inputs/A-9.cmm
+Error type B at line 1: syntax error, near ')'
+./Tests_2024/inputs/B-1.cmm
+Error type A at line 2: invalid ID: '1b1010'
+Error type B at line 5: syntax error, near '!'
+Error type B at line 7: syntax error, near 'else'
+./Tests_2024/inputs/B-2.cmm
+Error type B at line 6: syntax error, near ')'
+Error type B at line 9: syntax error, near 'float'
+Error type B at line 13: syntax error, near 'void'
+Error type A at line 15: invalid FLOAT number: '0.12.3'
+Error type A at line 16: invalid FLOAT number: '.20'
+./Tests_2024/inputs/D-1.cmm
+Error type A at line 2: invalid INT number: '0123'
+Error type A at line 3: invalid ID: '0xAdA0f12'
+Error type A at line 4: invalid ID: '0Xf1b3'
+Error type A at line 5: invalid INT number: '0007'
+./Tests_2024/inputs/D-2.cmm
+Program (1)
+  ExtDefList (1)
+    ExtDef (1)
+      Specifier (1)
+        TYPE: int
+      FunDec (1)
+        ID: main
+        LP
+        RP
+      CompSt (1)
+        LC
+        DefList (2)
+          Def (2)
+            Specifier (2)
+              TYPE: float
+            DecList (2)
+              Dec (2)
+                VarDec (2)
+                  ID: num1
+                ASSIGNOP
+                Exp (2)
+                  FLOAT: 0.000023
+            SEMI
+          DefList (3)
+            Def (3)
+              Specifier (3)
+                TYPE: float
+              DecList (3)
+                Dec (3)
+                  VarDec (3)
+                    ID: num2
+                  ASSIGNOP
+                  Exp (3)
+                    MINUS
+                    Exp (3)
+                      FLOAT: 9990000.000000
+              SEMI
+        RC
+./Tests_2024/inputs/D-3.cmm
+Error type B at line 1: syntax error, near '/'

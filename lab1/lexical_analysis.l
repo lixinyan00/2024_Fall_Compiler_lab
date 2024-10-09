@@ -20,6 +20,8 @@ ID {letter}{1}{character}{0,31}
 INT ({nz_digit}{digit}{0,31})|[0]
 FLOAT (({nz_digit}{digit}*)|0)\.(({digit}*{nz_digit})|0)
 SCIENCE_FLOAT (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee][+-]?[0-9]+
+ONE_LINE_COMMENT \/\/[^\n]*
+COMMENT_L \/\* 
 
 %%
 "\r" {}
@@ -29,6 +31,15 @@ SCIENCE_FLOAT (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee][+-]?[0-9]+
     }
 " " {}
 "\t" {}
+{ONE_LINE_COMMENT} {
+    grammar_error = 1;
+    printf("Error type B at line %d: syntax error, near \'%s\'\n", yylineno, yytext);
+    }
+{COMMENT_L} {
+    grammar_error = 1;
+    printf("Error type B at line %d: syntax error, near \'%s\'\n", yylineno, yytext);
+    yylineno = comment_handle(yylineno);
+    }  
 ";" {
     yylval.type_node = NewLexNode(yylineno, "SEMI", ";", LEX_UNIT_OTHER);
     return SEMI;
@@ -142,68 +153,92 @@ SCIENCE_FLOAT (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee][+-]?[0-9]+
     return FLOAT;
     }
 {digit}+{ID} {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid ID: \'%s\'\n", yylineno, yytext);
     return ID;
 }
 0{digit}+ {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid INT number: \'%s\'\n", yylineno, yytext);
     return INT;
 }
 0{digit}+\.{digit}+ {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 (({digit}+\.)|(\.{digit}+)) {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 {digit}*[Ee]{digit}* {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee][+-]? {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 {FLOAT}\.[0-9\.]* {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 (({nz_digit}{digit}*)|0)\.(\.+)(({digit}*{nz_digit})|0) {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 {SCIENCE_FLOAT}\.([\.0-9])* {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 (({digit}*\.{digit}+)|({digit}+\.{digit}*))[Ee]\.[+-]?[0-9]* {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 \.[Ee][+-][0-9]+ {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 \.[Ee]\.[+-][0-9]* {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: invalid FLOAT number: \'%s\'\n", yylineno, yytext);
     return FLOAT;
 }
 . {
-    lexical_error = 1;
+    lexical_error = yylineno;
     printf("Error type A at line %d: Mysterious characters: \'%s\'\n", yylineno , yytext);
     return MINUS;
-    }
+}
 %%
+
+int comment_handle(int yylineno) {
+    int state = 0;
+    while(state != 2) {
+        char c = input();
+        if (c == 0) {
+            return -1;
+        }
+        else if (c == '*') {
+            state = 1;
+        }
+        else if (c == '/' && state == 1) {
+            state = 2;
+        }
+        else {
+            state = 0;
+            if (c == '\n') {
+                yylineno++;
+                printf("Error type B at line %d: syntax error\n", yylineno);
+            }
+        }
+    }
+    return yylineno;
+}
