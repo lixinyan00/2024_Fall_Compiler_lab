@@ -136,7 +136,6 @@ def test_dir(dir: str):
     for file in sorted(filter(lambda x: getsub(x) == 'cmm', files)):
       file = os.path.join(path, file)
       result['total'] += 1
-      print(file)
       r = test_one(file)
       result[r] += 1
       if r != 'AC':
